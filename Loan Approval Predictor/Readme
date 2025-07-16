@@ -1,1 +1,35 @@
+This project applies multiple machine learning models to predict loan approval status (Approved or Not Approved) using a small loan dataset. 
+The goal is to preprocess the data properly, handle class imbalance with SMOTE, scale features, and compare model performances with 
+cross-validation and final hold-out evaluation.
+
+Data Cleaning & Preprocessing
+Imputed missing categorical values (Gender, Married, Dependents, Self_Employed, Credit_History, Loan_Amount_Term) with mode (most frequent).
+
+Imputed missing numerical LoanAmount with mean.
+
+Encoded categorical variables using LabelEncoder.
+
+Dropped Loan_ID column (unique identifier, not useful for prediction).
+
+Converted all columns to numeric types (handling any bad values).
+
+Visualized feature distributions and outliers using boxplots and histograms.
+
+ Handling Imbalance & Scaling
+Classes are moderately imbalanced (approximate ratio 2:1).
+
+Used SMOTE (Synthetic Minority Oversampling Technique) to oversample minority class during cross-validation.
+
+Applied RobustScaler for feature scaling to reduce the impact of outliers.
+
+Scaling and oversampling performed inside the pipeline to avoid data leakage.
+
+ Models Used
+Logistic Regression
+
+Decision Tree Classifier
+
+Random Forest Classifier
+
+XGBoost Classifier
 
