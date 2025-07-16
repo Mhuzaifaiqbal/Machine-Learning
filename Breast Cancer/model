@@ -1,1 +1,23 @@
+This project implements and evaluates several machine learning models to classify breast cancer tumors as Malignant (M) or Benign (B) using the Breast Cancer Wisconsin Diagnostic dataset.
+The goal is to compare multiple classification algorithms and observe the impact of feature scaling and cross-validation.
+Preprocess the dataset: clean missing values, drop highly correlated features.
 
+Handle potential class imbalance using StratifiedShuffleSplit.
+
+Use both RobustScaler and StandardScaler for scaling.
+
+Evaluate the following models:
+
+Logistic Regression
+
+Decision Tree Classifier
+
+Random Forest Classifier
+
+XGBoost Classifier (only one not sensitive to feature scaling)
+
+Compare models using:
+
+Cross-validation accuracy
+
+Classification reports (precision, recall, F1-score) 
