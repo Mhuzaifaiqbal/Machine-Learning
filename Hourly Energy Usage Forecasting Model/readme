@@ -1,1 +1,62 @@
+# ⚡ AEP Hourly Energy Forecasting using Facebook Prophet
+
+This project uses historical hourly energy consumption data from the AEP (American Electric Power) region to forecast
+future energy demand using the **FB (now Meta) Prophet** library.
+
+---
+
+## 📁 Dataset
+
+- **Source:** PJM Interconnection
+- **File:** `AEP_hourly.csv`
+- **Size:** 121,273 hourly entries
+- **Columns:**
+  - `Datetime`: Timestamps from 2004 to 2018
+  - `AEP_MW`: Energy usage in Megawatts (MW)
+
+---
+
+## ⚙️ Tools & Libraries
+
+- Python 🐍
+- [Facebook Prophet](https://facebook.github.io/prophet/)
+- Pandas
+- Seaborn / Matplotlib
+- Scikit-learn (for evaluation metrics)
+
+---
+
+## 📊 Workflow
+
+1. **Load and parse datetime**
+2. **Split data** into training and test sets (split: `01-Jan-2015`)
+3. **Train Prophet model** on training set
+4. **Forecast** on future dates matching test size
+5. **Visualize** forecast vs actuals
+6. **Evaluate** model using standard metrics
+
+---
+
+## 📈 Model Evaluation
+
+| Metric | Value |
+|--------|-------|
+| **MAE** | 1336.63 |
+| **RMSE** | 1745.71 |
+| **R² Score** | 0.519 |
+| **MAPE** | 8.88% |
+
+> ✅ MAPE < 10% indicates the model performs **reasonably well** for energy load forecasting.
+
+---
+
+## 📉 Forecast Plot Example
+
+![Forecast vs Actuals]
+
+---
+
+Can be made better by adding holiday effects, tuning hyperparameters or weather effects
+---
+
 
