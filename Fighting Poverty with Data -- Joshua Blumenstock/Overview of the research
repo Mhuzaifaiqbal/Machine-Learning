@@ -1,0 +1,16 @@
+📘 Overview of the Paper
+Joshua Blumenstock’s “Fighting Poverty with Data” (published in Science, 2015) explores how machine learning and mobile phone data can be used to predict and map 
+poverty in developing countries, especially where traditional household surveys are expensive and infrequent.
+Video Link: https://youtu.be/nqVR8GGnGV8?si=yv0Ld4MGhmO_Tdcf
+
+KEY POINTS FROM THE PAPER
+The primary challenge in developing countries is the scarcity of reliable, spatially disaggregated data.
+Mobile phones are a key source of "big data" in developing regions due to their ubiquity.
+The study merged a phone survey of 856 individuals with call records of 1.5 million users.
+A composite wealth index was created from survey responses as the prediction target.
+The modeling process had two steps: feature engineering and feature selection via elastic net.
+The model predicted individual wealth with a cross-validated correlation of r = 0.68.
+The model's output was used to create high-resolution maps of wealth at the micro-regional level.
+District-level predictions from phone data strongly correlated (r = 0.916) with ground-truth DHS data.
+A key application is providing low-cost, timely interim statistics between national surveys.
+The main future challenges are privacy protection and addressing mobile operators' concerns.
