@@ -1,0 +1,168 @@
+Multiple Choice Questions (5 questions, ~1-2 minutes each)
+
+What was the primary source of "big data" used in this study?
+a) Satellite imagery
+b) Social media posts
+c) Mobile phone call detail records
+d) Bank transaction records
+
+How was the "ground truth" data on wealth primarily validated?
+a) Against satellite night-light data
+b) By comparing it to the national census
+c) By comparing it to the Demographic and Health Survey (DHS)
+d) Through follow-up in-person interviews
+
+What machine learning technique was used to select the most relevant features and prevent overfitting?
+a) K-means clustering
+b) Elastic net regularization
+c) Principal component analysis
+d) Neural networks
+
+What does an Area-Under-the-Curve (AUC) value of 0.50 indicate about a model's performance?
+a) It is a perfect classifier.
+b) It is a very good classifier.
+c) It performs no better than random guessing.
+d) It is worse than random guessing.
+
+A major advantage of this mobile phone-based method over traditional surveys is its:
+a) Lower cost and faster implementation
+b) Ability to capture subjective opinions
+c) Independence from mobile network operators
+d) 100% accuracy in predicting individual wealth
+
+Short-Answer Questions (4 questions, ~2-3 minutes each)
+6. What is the two-step modeling process used to predict wealth from phone metadata?
+* Model Answer: First, feature engineering transforms raw phone logs into thousands of quantitative metrics. Second, feature selection using elastic net regularization winnows out non-predictive metrics to create a parsimonious model.
+7. What does a strong correlation (r = 0.916) between phone-based predictions and DHS data at the district level imply?
+* Model Answer: It implies that the wealth estimates derived from mobile phone data are accurate and representative of the true wealth distribution at an administrative level, validating the model's out-of-sample predictions.
+8. Besides predicting a composite wealth index, what else can this method predict?
+* Model Answer: It can predict responses to specific survey questions, such as ownership of assets like a television or motorcycle, and identify individuals living below a relative poverty line.
+9. State one practical application and one ethical challenge of this approach.
+* Model Answer: Application: Targeting humanitarian aid to the poorest regions. Challenge: Protecting the privacy of individual mobile phone subscribers.
+
+Applied/Mini-Essay Questions (2 questions, ~4-5 minutes each)
+10. Explain how this research moves beyond simply finding a correlation between regional phone use and regional wealth.
+* Marking Guide: A top answer will: 1) Contrast this study with prior work that only looked at regional aggregates. 2) Emphasize that this study makes individual-level predictions using a person's own "digital footprint." 3) Explain the advantages of this, such as applicability where census data is absent and the ability to target resources to specific individuals.
+11. The authors state their method could provide more accurate information than an outdated survey. Using evidence from the text, justify this claim.
+* Marking Guide: A top answer will: 1) Cite the example of Rwanda, where the 2010 wealth distribution was better predicted by 2009 phone data than by the older 2007 DHS data. 2) Explain that in dynamic economies, data becomes outdated quickly. 3) Conclude that the cheaper, faster phone-based method can provide more timely and accurate interim statistics for policymakers.
+
+8. Alternative Testing Formats & Traps to Watch For
+Conceptual MCQ: Testing your understanding of the "why" behind the method.
+
+Tip: Don't just memorize the correlation number; understand what it correlates and why that's important.
+
+Trap: Choosing a distractor that confuses individual-level and aggregate-level predictions.
+
+Diagram Interpretation: Being shown a version of Fig. 3C and asked to explain it.
+
+Tip: Be ready to label the axes and explain what a strong positive correlation means in this context.
+
+Trap: Misinterpreting the direction of the relationship or what the data points represent.
+
+Terminology Definition: Being asked to define "elastic net" or "composite wealth index."
+
+Tip: Know the purpose of the term, not just the definition. E.g., "Elastic net is for feature selection to prevent overfitting."
+
+Trap: Providing a vague definition that doesn't capture the term's specific role in the study.
+
+Methodology Comparison: Contrasting this two-step method with a simpler approach.
+
+Tip: Remember that the text says this method performed better than using a small number of "hand-crafted" metrics.
+
+Trap: Being unable to explain why the two-step process is more robust.
+
+Ethical Implications: Discussing the challenges of using private data for public good.
+
+Tip: Have the two key challenges (privacy, commercial concerns) ready and be able to elaborate.
+
+Trap: Only stating the challenge without proposing the need for protocols or careful consideration.
+
+"Why Not This?" Question: Being asked why the researchers didn't use a different method (e.g., only use CDRs without a survey).
+
+Tip: Understand that the phone survey was essential to create the labeled training data. Without it, there is no "ground truth" to train the model.
+
+Trap: Suggesting the model could work without any ground truth data at all.
+
+9. One-Page Study Cheat-Sheet
+Core Idea: Predict poverty/wealth using mobile phone metadata as a cheap, fast, high-resolution alternative to traditional surveys.
+Data Sources:
+
+Phone Survey (n=856): Provides "ground truth" (composite wealth index from asset questions).
+
+Call Detail Records - CDRs (n=1.5M): Provides features for prediction (calls, texts, location, social network).
+Methodology:
+
+Feature Engineering: Generate 1000s of metrics from CDRs (e.g., call volume, mobility, network size).
+
+Feature Selection: Use Elastic Net to pick the best, most generalizable predictors and avoid overfitting.
+Key Results:
+
+Individual Wealth: Predicted with r = 0.68.
+
+Asset Ownership: Predicted with high accuracy (e.g., Fridge AUC = 0.88).
+
+Mapping: Created high-resolution wealth maps for micro-regions.
+
+Validation: District-level predictions correlated with DHS data at r = 0.916.
+Significance:
+
+Cost: $12k vs. $1M+ for traditional survey.
+
+Speed: 4 weeks vs. 12-18 months.
+
+Applications: Small-area estimation, interim statistics, targeted aid.
+Challenges: Privacy, commercial data access.
+
+10 Flashcard Prompts:
+
+Q: What are the two primary data sources used? A: Phone survey (n=856) and call detail records (n=1.5M).
+
+Q: What is the composite wealth index? A: A single wealth metric created from multiple survey responses.
+
+Q: What are the two steps of the modeling process? A: Feature engineering followed by feature selection (elastic net).
+
+Q: What is the purpose of using elastic net? A: To select relevant features and prevent overfitting.
+
+Q: What was the correlation (r) for predicting individual wealth? A: 0.68.
+
+Q: What does an AUC of 0.50 mean? A: The model is no better than random guessing.
+
+Q: How were the model's predictions validated? A: Compared to district-level data from the DHS (r=0.916).
+
+Q: What is a key advantage of this method? A: It is low-cost and provides timely, high-resolution data.
+
+Q: What is one major application mentioned? A: Providing interim national statistics between surveys.
+
+Q: What are two main future challenges? A: Protecting individual privacy and addressing operator concerns.
+
+10. Active Recall Flashcards (10 Q/A)
+Front: What is the main type of data used for prediction? Back: Mobile phone metadata / Call Detail Records (CDRs).
+
+Front: What was the source of the "ground truth" wealth data? Back: A phone survey of 856 individuals.
+
+Front: What is the name of the technique used to avoid overfitting? Back: Elastic net regularization.
+
+Front: What metric (and value) showed the model was good at identifying the poor? Back: Area-Under-the-Curve (AUC), values from 0.72 to 0.81.
+
+Front: How did the cost of the phone survey compare to a traditional survey? Back: It was much cheaper ($12k vs. $1M+).
+
+Front: What authoritative survey was used to validate the results? Back: The Demographic and Health Survey (DHS).
+
+Front: At what geographic level were the predictions most detailed? Back: Micro-regions of just a few households.
+
+Front: Name one specific asset the model could predict. Back: Electricity, motorcycle, television, or fridge.
+
+Front: What does a correlation of r=0.916 at the district level prove? Back: The phone-based estimates accurately reflect true wealth distribution.
+
+Front: What is a potential downside of this method? Back: It raises concerns about individual privacy.
+
+11. Confidence & Priority Guide
+High Priority: The two-step modeling process (feature engineering + elastic net). Justification: This is the core methodological innovation and is highly testable.
+
+High Priority: The key results (individual r=0.68, district r=0.916, AUC examples). Justification: Quantitative results are frequently asked verbatim in quizzes.
+
+High Priority: Applications vs. Challenges (cost-effectiveness vs. privacy). Justification: This demonstrates your ability to critically evaluate the research.
+
+Medium Priority: The specific data sources (856 survey, 1.5M CDRs, DHS). Justification: Important context, but less likely to be the sole focus of a question.
+
+Low Priority: The names of specific features (e.g., mobility vs. social network for different assets). Justification: Mentioned in the text, but the conceptual understanding of using features is more important than the specifics.
