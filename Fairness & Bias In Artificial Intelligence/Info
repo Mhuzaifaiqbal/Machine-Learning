@@ -1,1 +1,8 @@
-
+This paper provides a comprehensive survey of bias and fairness in artificial intelligence (AI), explaining where bias originates within AI systems, how it negatively 
+impacts individuals and society, and what strategies exist to mitigate it. It highlights that AI systems can unintentionally reproduce and amplify discriminatory patterns 
+due to biased data, algorithmic assumptions, and user interactions, affecting critical areas such as healthcare, employment, criminal justice, and generative AI outputs. 
+The paper categorizes different types of bias (e.g., sampling, algorithmic, representation, generative) and demonstrates through real-world examples how biased AI systems 
+can reinforce racial and gender stereotypes or deny fair access to services. It also introduces different fairness paradigms including group fairness, individual fairness, 
+and counterfactual fairness, explaining how fairness differs from bias and why fairness must be intentionally designed. Finally, it reviews mitigation approaches such as 
+data preprocessing, fairness-aware model selection, and post-processing adjustments, discussing trade-offs and ethical implications. The conclusion emphasizes the need for 
+diverse data, transparent systems, accountability, and regulatory and ethical frameworks.
